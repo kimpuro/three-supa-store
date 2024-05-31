@@ -5,22 +5,23 @@ const collections = [
     name: "Women's",
     href: 'list',
     imageSrc:
-      'https://tailwindui.com/img/ecommerce-images/home-page-04-collection-01.jpg',
+      'https://images.unsplash.com/photo-1523404042717-0e70b5e03184?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     imageAlt: 'Woman wearing an off-white cotton t-shirt.',
+  },
+  {
+    name: "Cat's",
+    href: '/list',
+    imageSrc:
+      'https://images.unsplash.com/photo-1592194996308-7b43878e84a6?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    imageAlt:
+      'Person sitting at a wooden desk with paper note organizer, pencil and tablet.',
   },
   {
     name: "Men's",
     href: '/list',
     imageSrc:
-      'https://tailwindui.com/img/ecommerce-images/home-page-04-collection-02.jpg',
+      'https://images.unsplash.com/photo-1527010154944-f2241763d806?q=80&w=3088&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     imageAlt: 'Man wearing a charcoal gray cotton t-shirt.',
-  },
-  {
-    name: "Cat's",
-    href: '/list',
-    imageSrc: '/cats.jpg',
-    imageAlt:
-      'Person sitting at a wooden desk with paper note organizer, pencil and tablet.',
   },
 ]
 
@@ -35,7 +36,7 @@ export default function Promo() {
         <div className="relative w-full flex-1 bg-gray-800">
           <div className="absolute inset-0 overflow-hidden">
             <img
-              src="https://tailwindui.com/img/ecommerce-images/home-page-04-hero-full-width.jpg"
+              src="https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?q=80&w=2931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt=""
               className="h-full w-full object-cover object-center"
             />
@@ -65,7 +66,7 @@ export default function Promo() {
         </div>
         <div className="relative py-32">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-            Mid-Season Sale
+            KimPuro&apos;s Shoes
           </h1>
           <div className="mt-4 sm:mt-6">
             <Link
