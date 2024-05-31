@@ -1,5 +1,5 @@
 import React from 'react'
-import Detail from '@/components/Promo'
+import Detail from '@/components/Detail'
 import Layout from '@/components/Layout'
 function App() {
   return (

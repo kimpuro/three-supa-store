@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 const collections = [
   {
     name: "Women's",
@@ -67,12 +68,12 @@ export default function Promo() {
             Mid-Season Sale
           </h1>
           <div className="mt-4 sm:mt-6">
-            <a
-              href="#"
-              className="inline-block rounded-md border border-transparent bg-indigo-600 px-8 py-3 font-medium text-white hover:bg-indigo-700"
+            <Link
+              href="/list"
+              className="inline-block rounded-md border border-transparent bg-white px-8 py-3 font-medium text-black hover:bg-amber-50"
             >
-              Shop Collection
-            </a>
+              상품 둘러보기
+            </Link>
           </div>
         </div>
       </div>
@@ -110,10 +111,10 @@ export default function Promo() {
                       Shop the collection
                     </p>
                     <h3 className="mt-1 font-semibold text-white">
-                      <a href={collection.href}>
+                      <Link href={collection.href}>
                         <span className="absolute inset-0" />
                         {collection.name}
-                      </a>
+                      </Link>
                     </h3>
                   </div>
                 </div>

@@ -4,6 +4,7 @@ import React from 'react'
 import { Fragment } from 'react'
 import { StarIcon } from '@heroicons/react/20/solid'
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
+import Link from 'next/link'
 
 const product = {
   name: '정말 멋진 신발',
@@ -20,76 +21,74 @@ const reviews = {
       id: 1,
       rating: 5,
       content: `
-        <p>This icon pack is just what I need for my latest project. There's an icon for just about anything I could ever need. Love the playful look!</p>
+        <p>이 신발을 신고 코딩하니까 코드가 더 잘 작성되는 느낌이에요!</p>
       `,
-      date: 'July 16, 2021',
+      date: '2024-05-31',
       datetime: '2021-07-16',
-      author: 'Emily Selman',
-      avatarSrc:
-        'https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80',
+      author: '전현석',
+      avatarSrc: '/last.png',
     },
     {
       id: 2,
       rating: 5,
       content: `
-        <p>Blown away by how polished this icon pack is. Everything looks so consistent and each SVG is optimized out of the box so I can use it directly with confidence. It would take me several hours to create a single icon this good, so it's a steal at this price.</p>
+        <p>배송 빠름<br>가격 적당</p>
+     
       `,
-      date: 'July 12, 2021',
+      date: '2024-05-30',
       datetime: '2021-07-12',
-      author: 'Hector Gibbons',
-      avatarSrc:
-        'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80',
+      author: '임홍균',
+      avatarSrc: '/hong.png',
     },
     // More reviews...
   ],
 }
 const faqs = [
   {
-    question: 'What format are these icons?',
+    question: '세탁기에 넣고 돌려도 되나요?',
     answer:
-      'The icons are in SVG (Scalable Vector Graphic) format. They can be imported into your design tool of choice and used directly in code.',
+      '세탁소에 맡기시는 것을 추천드립니다. 세탁기에 넣으시면 제품이 손상될 수 있습니다.',
   },
   {
-    question: 'Can I use the icons at different sizes?',
-    answer:
-      "Yes. The icons are drawn on a 24 x 24 pixel grid, but the icons can be scaled to different sizes as needed. We don't recommend going smaller than 20 x 20 or larger than 64 x 64 to retain legibility and visual balance.",
+    question: '배송은 얼마나 걸리나요?',
+    answer: '평균 2~3일 정도 소모됩니다.',
   },
   // More FAQs...
 ]
-const license = {
+const refund = {
   href: '/refund',
   summary: '환불을 원하신다면 환불 규정을 읽어보세요.',
   content: `
-    <h4>Overview</h4>
+    <h4>안내 사항</h4>
     
-    <p>For personal and professional use. You cannot resell or redistribute these icons in their original or modified state.</p>
+    <p>세탁 방법</p>
     
     <ul role="list">
-    <li>You\'re allowed to use the icons in unlimited projects.</li>
-    <li>Attribution is not required to use the icons.</li>
+    <li>중성세제를 사용한 가벼운 물 세탁을 하는 것을 추천합니다.</li>
+    <li>세탁기에 넣고 돌리시면 제품이 손상될 수 있습니다.</li>
     </ul>
     
-    <h4>What you can do with it</h4>
+    <h4>배송 안내</h4>
     
     <ul role="list">
-    <li>Use them freely in your personal and professional work.</li>
-    <li>Make them your own. Change the colors to suit your project or brand.</li>
+    <li>배송은 평균 2~3일 정도 소요됩니다.</li>
+    <li>5시 이전 주문한 상품은 당일 발송합니다.</li>
     </ul>
     
-    <h4>What you can\'t do with it</h4>
+    <h4>환불 안내</h4>
     
     <ul role="list">
-    <li>Don\'t be greedy. Selling or distributing these icons in their original or modified state is prohibited.</li>
-    <li>Don\'t be evil. These icons cannot be used on websites or applications that promote illegal or immoral beliefs or activities.</li>
+    <li>제품이 마음에 들지 않는다면 반송을 해주시면 됩니다.</li>
+    <li>2주 이내에만 환불이 가능합니다.</li>
     </ul>
   `,
 }
 
-function classNames(...classes) {
+function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function Detail() {
   return (
     <div className="bg-white">
       <div className="mx-auto px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
@@ -143,18 +142,20 @@ export default function Example() {
             <p className="mt-6 text-gray-500">{product.description}</p>
 
             <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2">
-              <button
+              <Link
                 type="button"
                 className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
+                href={'/pay'}
               >
                 Pay {product.price}
-              </button>
-              <button
+              </Link>
+              <Link
                 type="button"
                 className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-50 px-8 py-3 text-base font-medium text-indigo-700 hover:bg-indigo-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
+                href={'/preview'}
               >
                 Preview
-              </button>
+              </Link>
             </div>
 
             <div className="mt-10 border-t border-gray-200 pt-10">
@@ -171,13 +172,13 @@ export default function Example() {
             <div className="mt-10 border-t border-gray-200 pt-10">
               <h3 className="text-sm font-medium text-gray-900">환불 규정</h3>
               <p className="mt-4 text-sm text-gray-500">
-                {license.summary}{' '}
-                <a
-                  href={license.href}
+                {refund.summary}{' '}
+                <Link
+                  href={refund.href}
                   className="font-medium text-indigo-600 hover:text-indigo-500"
                 >
-                  Read full license
-                </a>
+                  환불 규정
+                </Link>
               </p>
             </div>
 
@@ -185,8 +186,8 @@ export default function Example() {
               <h3 className="text-sm font-medium text-gray-900">Share</h3>
               <ul role="list" className="mt-4 flex items-center space-x-6">
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    href="https://github.com/kimpuro"
                     className="flex h-6 w-6 items-center justify-center text-gray-400 hover:text-gray-500"
                   >
                     <span className="sr-only">Share on Facebook</span>
@@ -202,11 +203,11 @@ export default function Example() {
                         clipRule="evenodd"
                       />
                     </svg>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    href="https://github.com/kimpuro"
                     className="flex h-6 w-6 items-center justify-center text-gray-400 hover:text-gray-500"
                   >
                     <span className="sr-only">Share on Instagram</span>
@@ -222,11 +223,11 @@ export default function Example() {
                         clipRule="evenodd"
                       />
                     </svg>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    href="https://github.com/kimpuro"
                     className="flex h-6 w-6 items-center justify-center text-gray-400 hover:text-gray-500"
                   >
                     <span className="sr-only">Share on X</span>
@@ -238,7 +239,7 @@ export default function Example() {
                     >
                       <path d="M11.4678 8.77491L17.2961 2H15.915L10.8543 7.88256L6.81232 2H2.15039L8.26263 10.8955L2.15039 18H3.53159L8.87581 11.7878L13.1444 18H17.8063L11.4675 8.77491H11.4678ZM9.57608 10.9738L8.95678 10.0881L4.02925 3.03974H6.15068L10.1273 8.72795L10.7466 9.61374L15.9156 17.0075H13.7942L9.57608 10.9742V10.9738Z" />
                     </svg>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -364,7 +365,7 @@ export default function Example() {
 
                   <div
                     className="prose prose-sm max-w-none text-gray-500"
-                    dangerouslySetInnerHTML={{ __html: license.content }}
+                    dangerouslySetInnerHTML={{ __html: refund.content }}
                   />
                 </TabPanel>
               </TabPanels>
