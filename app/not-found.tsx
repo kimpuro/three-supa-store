@@ -1,14 +1,13 @@
 import React from 'react'
-import Promo from '@/components/Promo'
+import NotFound1 from '@/components/NotFound1'
 import Layout from '@/components/Layout'
-function App() {
+
+export default function NotFound() {
   return (
     <>
       <Layout>
-        <Promo />
+        <NotFound1 />
       </Layout>
     </>
   )
 }
-
-export default App

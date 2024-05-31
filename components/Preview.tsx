@@ -1,12 +1,13 @@
+import React from 'react'
 import { Canvas } from '@react-three/fiber'
 import ShowRoom from '@/components/three/ShowRoom'
 import ColorComp from '@/components/ColorComp'
 import { Suspense } from 'react'
 import SpinButton from '@/components/SpinButton'
 
-export default function Home() {
-  let angle = 0
-  let dis = 2.0
+export default function Preview() {
+  const angle = 0
+  const dis = 2.0
   return (
     <>
       <Suspense fallback={<SpinButton />}>

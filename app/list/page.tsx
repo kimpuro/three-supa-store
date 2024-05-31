@@ -1,11 +1,11 @@
 import React from 'react'
-import Promo from '@/components/Promo'
+import Detail from '@/components/Promo'
 import Layout from '@/components/Layout'
 function App() {
   return (
     <>
       <Layout>
-        <Promo />
+        <ProductList />
       </Layout>
     </>
   )
