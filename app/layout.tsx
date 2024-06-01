@@ -1,5 +1,4 @@
 import { GeistSans } from 'geist/font/sans'
-import './globals.css'
 import React from 'react'
 
 const defaultUrl = process.env.VERCEL_URL
