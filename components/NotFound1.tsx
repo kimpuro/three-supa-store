@@ -1,17 +1,18 @@
+import Link from 'next/link'
 import React from 'react'
 export default function NotFound1() {
   return (
     <>
       <div className="grid min-h-full grid-cols-1 grid-rows-[1fr,auto,1fr] bg-white lg:grid-cols-[max(50%,36rem),1fr]">
         <header className="mx-auto w-full max-w-7xl px-6 pt-6 sm:pt-10 lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:px-8">
-          <a href="/">
+          <Link href="/">
             <span className="sr-only">Mr.Egg Sushi</span>
             <img
               className="h-10 w-auto sm:h-12"
               src="/icon/mr-egg-sushi.svg"
               alt="mr-egg-sushi logo"
             />
-          </a>
+          </Link>
         </header>
         <main className="mx-auto w-full max-w-7xl px-6 py-24 sm:py-32 lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:px-8">
           <div className="max-w-lg">
@@ -25,19 +26,19 @@ export default function NotFound1() {
               잘못된 주소이거나 만들어지지 않은 페이지입니다.
             </p>
             <div className="mt-10">
-              <a
+              <Link
                 href="/"
                 className="text-sm font-semibold leading-7 text-indigo-600"
               >
                 <span aria-hidden="true">&larr;</span> Back to home
-              </a>
+              </Link>
             </div>
           </div>
         </main>
         <footer className="self-end lg:col-span-2 lg:col-start-1 lg:row-start-3">
           <div className="border-t border-gray-100 bg-gray-50 py-10">
             <nav className="mx-auto flex w-full max-w-7xl items-center gap-x-4 px-6 text-sm leading-7 text-gray-600 lg:px-8">
-              <a href="/">Contact support</a>
+              <Link href="/">Contact support</Link>
               <svg
                 viewBox="0 0 2 2"
                 aria-hidden="true"
@@ -45,7 +46,7 @@ export default function NotFound1() {
               >
                 <circle cx={1} cy={1} r={1} />
               </svg>
-              <a href="/">Status</a>
+              <Link href="/">Status</Link>
             </nav>
           </div>
         </footer>

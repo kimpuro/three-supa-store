@@ -27,9 +27,14 @@ export default function ColorComp() {
     // setSelected(idx);
     setSelectedColorIdx(idx)
   }
+
   return (
-    <Box className={'color-wrap'}>
-      <Box className={'color-inner-wrap'} style={{ width: width }}>
+    <Box className={'color-wrap'} component="div">
+      <Box
+        className={'color-inner-wrap'}
+        style={{ width: width }}
+        component="div"
+      >
         <Typography className="current-part">{selectedMeshName}</Typography>
         <List className={'list-wrap'}>
           {Constants.COLOR_ARR.map((color, idx) => (
