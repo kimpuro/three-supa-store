@@ -6,7 +6,6 @@ const navigation = [
   { name: 'List', href: '/list' },
   { name: 'Detail', href: '/detail' },
   { name: 'Preview', href: '/preview' },
-  { name: 'Admin', href: '/asdasdasd' },
 ]
 
 export default function Header() {
