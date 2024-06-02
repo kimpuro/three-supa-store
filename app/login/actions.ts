@@ -38,7 +38,11 @@ export async function signup(formData: FormData) {
 
   const { error } = await supabase.auth.signUp(data)
 
-  if (error) {
+  if (error?.status===429){
+    console.error(error)
+    redirect('/error429')
+  }
+ else if (error) {
     console.error(error)
     redirect('/error')
   }
