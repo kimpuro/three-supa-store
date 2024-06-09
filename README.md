@@ -1,5 +1,6 @@
-# 김동은의 신발 쇼핑몰 미니 프로젝트 입니다.
+# 신발 쇼핑몰
 
+김동은의 신발 쇼핑몰 미니 프로젝트 입니다.
 
 ## 주요 기술 스택
 
@@ -34,6 +35,7 @@ TypeScript, React, Next.js, Tailwind CSS, Three.js, Recoil, Supabase
 본인이 선택한 색을 불러올 수 있습니다.
 
 ## 설명 영상
+
 <a href="https://youtu.be/4NxH_T_iw7c?si=MjZN173J8P07l-5m&t=118">
 링크입니다
 </a>
