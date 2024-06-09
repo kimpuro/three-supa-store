@@ -1,93 +1,40 @@
-<a href="https://demo-nextjs-with-supabase.vercel.app/">
-  <img alt="Next.js and Supabase Starter Kit - the fastest way to build apps with Next.js and Supabase" src="https://demo-nextjs-with-supabase.vercel.app/opengraph-image.png">
-  <h1 align="center">Next.js and Supabase Starter Kit</h1>
+# 김동은의 신발 쇼핑몰 미니 프로젝트 입니다.
+
+
+## 주요 기술 스택
+
+TypeScript, React, Next.js, Tailwind CSS, Three.js, Recoil, Supabase
+
+## 상세 설명
+
+메인 페이지에는 상품을 둘러보러 가거나 상단의 헤더를 통해 원하는 위치로 바로 이동할 수 있습니다.
+
+로그인과 회원 가입은 supabase의 서버리스 db 시스템을 통해 구현되어 있습니다.
+회원 가입을 진행한다면 supabase db에 유저가 추가되게 됩니다. supabase를 통한 메일 인증을 받게 되고 메일의 링크를 클릭한다면 보안 코드가 인증 토큰으로 교체됩니다.
+실제 로직은 next.js의 서버 액션, 서버 컴포넌트, 미들웨어를 통해서 진행됩니다.
+시간 당 메일 전송 횟수가 초과된 상태라면 테스트 계정이 있는 페이지로 안내하고
+아이디나 비밀번호가 틀렸다면 그에 대한 안내 페이지로 이동합니다.
+로그인을 한 상태라면 마이페이지의 접속해 본인의 유저 정보를 확인할 수 있습니다.
+
+지금 현재는 남성 여성 그리고 고양이에 대한 카테고리는 전부 같은 페이지로 연결됩니다.
+상품도 4가지가 모두 같은 상품입니다.
+클릭을 한다면 상품의 상세 정보를 볼 수 있습니다.
+구매 버튼은 추후에 구현할 예정입니다.
+
+프리뷰를 누르신다면 three js 로 랜더링한 신발의 3d모델링을 보실 수 있습니다.
+
+3D 모델링은 glb 파일입니다. glb 파일은 용량이 크기 때문에 git lfs를 사용해 저장하였고 이를 배포할 때 lfs에서 다운 받아서 배포를 진행하게 됩니다.
+현재는 풀 리퀘스트가 발생할 때마다 lfs에서 모델링을 다운 받고 빌드 후 배포를 하게 되는데 너무 많은 풀 리퀘스트로 git lfs의 트래픽 제한을 넘어버리는 문제가 발생했습니다.
+그래서 배포를 중단하게 되었고 이를 해결하는 것이 목표입니다.
+
+신발의 부위를 클릭한 후 색을 선택한다면 신발의 부위별로 색을 바꿔볼 수 있습니다.
+신발 부위의 선택은 react three fiber의 레이캐스터를 사용했습니다.
+신발 색의 상태는 리코일을 통해 관리됩니다.
+3d 모델링은 매쉬마다 각각 따로 상태를 저장하므로 추후 구매 기능을 추가한다면
+본인이 선택한 색을 불러올 수 있습니다.
+
+## 설명 영상
+<a href="https://youtu.be/4NxH_T_iw7c?si=MjZN173J8P07l-5m&t=118">
+링크입니다
 </a>
 
-<p align="center">
- The fastest way to build apps with Next.js and Supabase
-</p>
-
-<p align="center">
-  <a href="#features"><strong>Features</strong></a> ·
-  <a href="#demo"><strong>Demo</strong></a> ·
-  <a href="#deploy-to-vercel"><strong>Deploy to Vercel</strong></a> ·
-  <a href="#clone-and-run-locally"><strong>Clone and run locally</strong></a> ·
-  <a href="#feedback-and-issues"><strong>Feedback and issues</strong></a>
-  <a href="#more-supabase-examples"><strong>More Examples</strong></a>
-</p>
-<br/>
-
-## Features
-
-- Works across the entire [Next.js](https://nextjs.org) stack
-  - App Router
-  - Pages Router
-  - Middleware
-  - Client
-  - Server
-  - It just works!
-- supabase-ssr. A package to configure Supabase Auth to use cookies
-- Styling with [Tailwind CSS](https://tailwindcss.com)
-- Optional deployment with [Supabase Vercel Integration and Vercel deploy](#deploy-your-own)
-  - Environment variables automatically assigned to Vercel project
-
-## Demo
-
-You can view a fully working demo at [demo-nextjs-with-supabase.vercel.app](https://demo-nextjs-with-supabase.vercel.app/).
-
-## Deploy to Vercel
-
-Vercel deployment will guide you through creating a Supabase account and project.
-
-After installation of the Supabase integration, all relevant environment variables will be assigned to the project so the deployment is fully functioning.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fwith-supabase&project-name=nextjs-with-supabase&repository-name=nextjs-with-supabase&demo-title=nextjs-with-supabase&demo-description=This%20starter%20configures%20Supabase%20Auth%20to%20use%20cookies%2C%20making%20the%20user's%20session%20available%20throughout%20the%20entire%20Next.js%20app%20-%20Client%20Components%2C%20Server%20Components%2C%20Route%20Handlers%2C%20Server%20Actions%20and%20Middleware.&demo-url=https%3A%2F%2Fdemo-nextjs-with-supabase.vercel.app%2F&external-id=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fwith-supabase&demo-image=https%3A%2F%2Fdemo-nextjs-with-supabase.vercel.app%2Fopengraph-image.png&integration-ids=oac_VqOgBHqhEoFTPzGkPd7L0iH6)
-
-The above will also clone the Starter kit to your GitHub, you can clone that locally and develop locally.
-
-If you wish to just develop locally and not deploy to Vercel, [follow the steps below](#clone-and-run-locally).
-
-## Clone and run locally
-
-1. You'll first need a Supabase project which can be made [via the Supabase dashboard](https://database.new)
-
-2. Create a Next.js app using the Supabase Starter template npx command
-
-   ```bash
-   npx create-next-app -e with-supabase
-   ```
-
-3. Use `cd` to change into the app's directory
-
-   ```bash
-   cd name-of-new-app
-   ```
-
-4. Rename `.env.local.example` to `.env.local` and update the following:
-
-   ```
-   NEXT_PUBLIC_SUPABASE_URL=[INSERT SUPABASE PROJECT URL]
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=[INSERT SUPABASE PROJECT API ANON KEY]
-   ```
-
-   Both `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` can be found in [your Supabase project's API settings](https://app.supabase.com/project/_/settings/api)
-
-5. You can now run the Next.js local development server:
-
-   ```bash
-   npm run dev
-   ```
-
-   The starter kit should now be running on [localhost:3000](http://localhost:3000/).
-
-> Check out [the docs for Local Development](https://supabase.com/docs/guides/getting-started/local-development) to also run Supabase locally.
-
-## Feedback and issues
-
-Please file feedback and issues over on the [Supabase GitHub org](https://github.com/supabase/supabase/issues/new/choose).
-
-## More Supabase examples
-
-- [Next.js Subscription Payments Starter](https://github.com/vercel/nextjs-subscription-payments)
-- [Cookie-based Auth and the Next.js 13 App Router (free course)](https://youtube.com/playlist?list=PL5S4mPUpp4OtMhpnp93EFSo42iQ40XjbF)
-- [Supabase Auth and the Next.js App Router](https://github.com/supabase/supabase/tree/master/examples/auth/nextjs)
