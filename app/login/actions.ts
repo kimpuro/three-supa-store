@@ -44,6 +44,9 @@ export async function signup(formData: FormData) {
   if (error?.status === 429) {
     console.error(error)
     redirect('/error429')
+  } else if (error?.status === 422) {
+    console.error(error)
+    redirect('/error422')
   } else if (error) {
     console.error(error)
     redirect('/error')
