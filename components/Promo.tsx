@@ -6,22 +6,21 @@ const collections = [
     href: 'list',
     imageSrc:
       'https://images.unsplash.com/photo-1523404042717-0e70b5e03184?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    imageAlt: 'Woman wearing an off-white cotton t-shirt.',
+    imageAlt: 'Women',
   },
   {
     name: "Cat's",
     href: '/list',
     imageSrc:
       'https://images.unsplash.com/photo-1592194996308-7b43878e84a6?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    imageAlt:
-      'Person sitting at a wooden desk with paper note organizer, pencil and tablet.',
+    imageAlt: 'Cat',
   },
   {
     name: "Men's",
     href: '/list',
     imageSrc:
       'https://images.unsplash.com/photo-1527010154944-f2241763d806?q=80&w=3088&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    imageAlt: 'Man wearing a charcoal gray cotton t-shirt.',
+    imageAlt: 'Men',
   },
 ]
 
