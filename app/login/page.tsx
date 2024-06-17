@@ -1,4 +1,5 @@
-import { login, signup } from './actions'
+import React from 'react'
+import { login } from './actions'
 
 export default function LoginPage() {
   return (
@@ -12,14 +13,19 @@ export default function LoginPage() {
         <h2 className="mt-6 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
           로그인
         </h2>
-        <p className="text-center mt-2">로그인이 되지 않는다면 메일함을 확인해 주세요.</p>
+        <p className="text-center mt-2">
+          로그인이 되지 않는다면 메일함을 확인해 주세요.
+        </p>
       </div>
 
       <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-[480px]">
         <div className="bg-white px-6 py-12 shadow sm:rounded-lg sm:px-12">
           <form className="space-y-6" action="#">
             <div>
-              <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium leading-6 text-gray-900"
+              >
                 Email address
               </label>
               <div className="mt-2">
@@ -35,7 +41,10 @@ export default function LoginPage() {
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
+              <label
+                htmlFor="password"
+                className="block text-sm font-medium leading-6 text-gray-900"
+              >
                 Password
               </label>
               <div className="mt-2">
