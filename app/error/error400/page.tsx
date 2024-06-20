@@ -10,15 +10,21 @@ export default function Page() {
             에러 페이지 입니다.
           </h1>
           <p className="mt-6 text-base leading-7 text-gray-600">
-            죄송합니다. 비밀 번호가 너무 짧습니다.
+            죄송합니다. 아이디나 비밀번호가 틀렸습니다.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Link
-              href="/"
+              href="/public"
               className="rounded-md bg-cyan-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Go back home
             </Link>
+            <a
+              href="mailto:puro@protonmail.ch?subject=포트폴리오 웹사이트에 에러가 생겼습니다."
+              className="text-sm font-semibold text-gray-900"
+            >
+              메일 보내기 <span aria-hidden="true">&rarr;</span>
+            </a>
           </div>
         </div>
       </main>
