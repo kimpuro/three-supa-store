@@ -13,6 +13,7 @@ export default function LoginPage() {
           회원 가입
         </h2>
         <p className="text-center mt-2">인증 메일이 발송되니 실제 메일 주소를 입력해주세요.</p>
+        <p className="text-center mt-2">버튼은 한 번만 누르고 기다려주세요!(추후 수정 예정)</p>
       </div>
 
       <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-[480px]">
