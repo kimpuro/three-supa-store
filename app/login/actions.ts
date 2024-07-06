@@ -17,11 +17,10 @@ export async function login(formData: FormData) {
 
   const { error } = await supabase.auth.signInWithPassword(data)
 
-  if (error?.status===400){
+  if (error?.status === 400) {
     console.error(error)
-    redirect('/error400')
-  }
-  else if (error) {
+    redirect('/error/error400')
+  } else if (error) {
     console.error(error)
     redirect('/error')
   }
@@ -42,11 +41,13 @@ export async function signup(formData: FormData) {
 
   const { error } = await supabase.auth.signUp(data)
 
-  if (error?.status===429){
+  if (error?.status === 429) {
     console.error(error)
-    redirect('/error429')
-  }
- else if (error) {
+    redirect('/error/error429')
+  } else if (error?.status === 422) {
+    console.error(error)
+    redirect('/error/error422')
+  } else if (error) {
     console.error(error)
     redirect('/error')
   }
@@ -58,7 +59,12 @@ export async function signup(formData: FormData) {
 export async function logout() {
   const supabase = createClient()
 
-    const { error } = await supabase.auth.signOut()
+  const { error } = await supabase.auth.signOut()
+
+  if (error) {
+    console.error(error)
+    redirect('/error')
+  }
 
   revalidatePath('/logout', 'layout')
   redirect('/logout')
