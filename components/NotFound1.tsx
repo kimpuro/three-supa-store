@@ -23,7 +23,7 @@ export default function NotFound1() {
               Page not found
             </h1>
             <p className="mt-6 text-base leading-7 text-gray-600">
-              잘못된 주소이거나 만들어지지 않은 페이지입니다.
+              아직 구현하지 않은 페이지 입니다.
             </p>
             <div className="mt-10">
               <Link
