@@ -36,9 +36,3 @@ Back-end: Supabase (Serverless 플랫폼, 인증 및 데이터베이스 제공)
 3D 모델 최적화 및 로딩 속도 개선
 Git LFS 트래픽 문제 해결 및 지속적인 배포 환경 구축
 
-## 설명 영상
-
-<a href="https://youtu.be/4NxH_T_iw7c?si=MjZN173J8P07l-5m&t=118">
-링크입니다
-</a>
-
