@@ -14,6 +14,7 @@ export default function LoginPage() {
         </h2>
         <p className="text-center mt-2">인증 메일이 발송되니 실제 메일 주소를 입력해주세요.</p>
         <p className="text-center mt-2">버튼은 한 번만 눌러주세요</p>
+        <p className="text-center mt-2">Supabase의 정책 문제로 현재 회원 가입이 불가능합니다 죄송합니다.</p>
       </div>
 
       <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-[480px]">
